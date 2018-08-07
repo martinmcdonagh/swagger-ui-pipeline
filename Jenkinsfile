@@ -11,7 +11,6 @@ pipeline {
         CI = 'true'
       }
       steps {
-        sh 'git clone https://github.com/mhawley1230/ReadyAPI---OpenWeatherMap.git'
         sh '''cd ReadyAPI---OpenWeatherMap
 
 git pull 
