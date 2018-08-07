@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'steven'
+    }
+
+  }
   stages {
     stage('Build') {
       steps {
@@ -20,7 +25,7 @@ cd ..'''
     }
     stage('Deliver') {
       steps {
-        sh 'nohup npm start >> log_file.txt 2>&1 &'
+        sh 'npm start'
       }
     }
   }
