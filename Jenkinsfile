@@ -20,7 +20,7 @@ cd ..'''
     }
     stage('Deliver') {
       steps {
-        sh 'nohup npm start >> ./logs/log_file.txt 2>&1 &'
+        sh 'nohup npm start >> log_file.txt 2>&1 &'
       }
     }
   }
