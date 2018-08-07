@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'npm install'
+        sh 'npm install'
       }
     }
     stage('Test') {
@@ -11,14 +11,17 @@ pipeline {
         CI = 'true'
       }
       steps {
-        bat './scripts/test.bat'
+        sh 'git clone https://github.com/mhawley1230/ReadyAPI---OpenWeatherMap.git'
+        sh '''cd ReadyAPI---OpenWeatherMap
+
+git pull 
+
+cd ..'''
       }
     }
     stage('Deliver') {
       steps {
-        bat './scripts/deliver.bat'
-        input 'Finished using the web site? (Click "Proceed" to continue)'
-        bat './scripts/kill.bat'
+        sh 'nohup npm start >> ./logs/log_file.txt 2>&1 &'
       }
     }
   }
