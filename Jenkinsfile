@@ -23,7 +23,8 @@ cd ..'''
     }
     stage('Deliver') {
       steps {
-        sh 'npm start'
+        sh 'nohup npm start >> ./logs/log_file.txt 2>&1 &'
+        input 'wait'
       }
     }
   }
