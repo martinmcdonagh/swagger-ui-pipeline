@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "Swagger file to support OWM",
+    "description" : "Swagger file to support OWM - Chagned This",
     "version" : "1.0",
     "title" : "OpenWeatherMapAPI"
   },
