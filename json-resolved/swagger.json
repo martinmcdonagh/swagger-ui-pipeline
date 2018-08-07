@@ -2,23 +2,23 @@
   "swagger" : "2.0",
   "info" : {
     "description" : "Swagger file to support OWM",
-    "version" : "1.1.0",
+    "version" : "1.0",
     "title" : "OpenWeatherMapAPI"
   },
-  "host" : "api.openweathermap.org",
-  "basePath" : "/data/2.5/",
-  "schemes" : [ "http" ],
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/SE-Design/OpenWeatherMapAPI/1.1.0",
+  "schemes" : [ "https", "http" ],
   "paths" : {
     "/weather" : {
       "get" : {
         "summary" : "Resource for individual city weather",
-        "description" : "You can call by city name or city name and country code. API responds with a list of results that match a searching word!!",
+        "description" : "You can call by city name or city name and country code. API responds with a list of results that match a searching word!!!",
         "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
           "name" : "q",
           "in" : "query",
-          "description" : "City name and country code divided by comma, use ISO 3166 country code!!!",
-          "required" : true,
+          "description" : "City name and country code divided by comma, use ISO 3166 country code.",
+          "required" : false,
           "type" : "string"
         }, {
           "name" : "id",
