@@ -28,7 +28,6 @@ cd ..
     }
     stage('Deliver') {
       steps {
-        sh ' socat -u tcp-l:8091,fork system:./start-api.sh'
         sh 'netcat localhost 8091'
       }
     }
