@@ -17,8 +17,13 @@ pipeline {
       }
       steps {
         sh '''cd ReadyAPI---OpenWeatherMap
+
 git pull 
-cd ..'''
+
+cd ..
+
+"/home/ubuntu/SmartBear/ReadyAPI-2.4.0/bin/testrunner.sh" "-EDefault environment" "./ReadyAPI---OpenWeatherMap"
+'''
       }
     }
     stage('Deliver') {
