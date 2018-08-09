@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  description: Swagger file to support OWM - I changed this again x5!!
+  description: Swagger file to support OWM - I changed this again x7!!
   version: "1.0"
   title: OpenWeatherMapAPI
 host: virtserver.swaggerhub.com
