@@ -16,7 +16,7 @@ pipeline {
         CI = 'true'
       }
       steps {
-        sh '''cd ReadyAPI---OpenWeatherMap
+        sh '''cd /home/ubuntu/ReadyAPI---OpenWeatherMap
 
 git pull 
 
